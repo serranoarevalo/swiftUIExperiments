@@ -9,12 +9,16 @@ struct DefaultView: View{
             Text("The number is")
             Text("\(counter)").font(.largeTitle)
             HStack {
-                Button(action: incrementButton){
-                    Text("Plus")
-                }
-                Button(action: decrementButton) {
-                    Text("Minus")
-                }
+                Group{
+                    Button(action: incrementButton){
+                    Text("Plus").color(Color.white).padding(5)
+                    }
+                }.background(Color.blue).clipShape(RoundedRectangle(cornerRadius: 5))
+                Group{
+                    Button(action: decrementButton) {
+                        Text("Minus").color(Color.white).padding(5)
+                    }
+                }.background(Color.blue).clipShape(RoundedRectangle(cornerRadius: 5))
             }
             
         }
